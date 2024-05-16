@@ -35,9 +35,6 @@ export const sharedColors = {
 };
 
 export const sharedStyles = {
-  iconColor: {
-    color: sharedColors.gray4,
-  },
   buttonText: {
     fontFamily: 'Roboto',
     fontStyle: 'normal',
@@ -101,11 +98,6 @@ export const sharedStyles = {
     fontSize: '10px',
     lineHeight: '12px',
   },
-  outerTableContainer: {
-    display: 'flex',
-    flexDirection: 'column',
-    flexGrow: 1,
-  },
   pageBody: {
     display: 'flex',
     flexDirection: 'column',
@@ -121,6 +113,22 @@ export const sharedStyles = {
     paddingY: 2.5,
     mt: 0.1,
   },
+  columnLabel: {
+    fontFamily: 'Roboto',
+    fontStyle: 'normal',
+    fontWeight: 500,
+    fontSize: '14px',
+    lineHeight: '16px',
+  },
+  tableStringField: {
+    fontFamily: 'Roboto',
+    fontStyle: 'normal',
+    fontWeight: 'normal',
+    fontSize: '14px',
+    lineHeight: '32px',
+    flexDirection: 'row',
+    display: 'flex',
+  },
   subtitle1: {
     fontFamily: 'Roboto',
     fontStyle: 'normal',
@@ -134,39 +142,5 @@ export const sharedStyles = {
     fontWeight: 'normal',
     fontSize: '13px',
     lineHeight: '15px',
-  },
-  tableContainer: {
-    display: 'flex',
-    flexGrow: 1,
-    flexDirection: 'column',
-    marginTop: 2,
-    backgroundColor: sharedColors.gray1,
-  },
-  tableStringField: {
-    fontFamily: 'Roboto',
-    fontStyle: 'normal',
-    fontWeight: 'normal',
-    fontSize: '14px',
-    lineHeight: '32px',
-    flexDirection: 'row',
-    display: 'flex',
-  },
-  columnLabel: {
-    fontFamily: 'Roboto',
-    fontStyle: 'normal',
-    fontWeight: 500,
-    fontSize: '14px',
-    lineHeight: '16px',
-  },
-  editableRow: {
-    cursor: 'pointer',
-  },
-  hidden: {
-    display: 'none',
-  },
-  resultChartContainer: {
-    flexGrow: 1,
-    mt: 2.5,
-    p: 2.5,
   },
 };
