@@ -5,6 +5,7 @@ import { ToastContainer } from 'material-react-toastify';
 import 'material-react-toastify/dist/ReactToastify.css';
 import { Navigate, Route, Routes } from 'react-router-dom';
 import MoviesPage from './components/Movies/MoviesPage';
+import MovieDetailsPage from './components/MovieDetails/MovieDetailsPage';
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
         pauseOnHover
       />
       <Routes>
+        <Route path='/movies/:imdbID' element={<MovieDetailsPage />} />
         <Route path='/movies/*' element={<MoviesPage />} />
         <Route path='*' element={<Navigate to='/movies' replace />} />
       </Routes>

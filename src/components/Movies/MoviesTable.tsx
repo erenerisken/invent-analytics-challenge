@@ -10,6 +10,7 @@ import {
   TableRow,
   Typography,
 } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
 import { MovieSummary } from '../../interfaces/MovieSummary';
 import { sharedColors, sharedStyles } from '../../util/Style';
 import { getMovieTypeColor, getMovieTypeName } from '../utils/MovieType';
@@ -23,6 +24,8 @@ interface MoviesTableProps {
 }
 
 const MoviesTable = (props: MoviesTableProps) => {
+  const navigate = useNavigate();
+
   return (
     <TableContainer
       component={Paper}
@@ -54,7 +57,11 @@ const MoviesTable = (props: MoviesTableProps) => {
         </TableHead>
         <TableBody>
           {props.rows.map((row) => (
-            <TableRow key={row.imdbID} sx={{ cursor: 'pointer' }}>
+            <TableRow
+              key={row.imdbID}
+              onClick={() => navigate(`/movies/${  row.imdbID}`)}
+              sx={{ cursor: 'pointer' }}
+            >
               <TableCell>
                 <PosterCell alt={row.title} url={row.posterUrl} />
               </TableCell>
